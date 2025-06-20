@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Save Info</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="lang-toggle" class="top-toggle">
+    <button onclick="toggleLanguage()">عربي</button>
+  </div>
+
+  <div id="app">
+    <h1 data-en="Save Info" data-ar="احفظ معلوماتك">Save Info</h1>
+    <div id="auth-section">
+      <input type="email" placeholder="Email" id="email" />
+      <input type="password" placeholder="Password" id="password" />
+      <button onclick="login()">Login / Register</button>
+    </div>
+    <div id="info-section" style="display:none;">
+      <textarea id="user-info" placeholder="Enter your info here..."></textarea>
+      <button onclick="saveInfo()">Save</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Contact: saveinfoapp@gmail.com | Telegram: @saveinfo_app</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
